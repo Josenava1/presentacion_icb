@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a Presentación</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container login-container">
+        <h1 class="title">Acceso Exclusivo</h1>
+        <p class="subtitle"></p>
+        <form action="/login" method="POST" class="login-form">
+            <input type="text" name="username" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script src="particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'assets/particles.json', function() {
+          console.log('Fondo de partículas "Snow" cargado correctamente.');
+        });
+
+        // Script para mostrar el mensaje de error del login
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('error')) {
+            document.getElementById('error-message').innerText = 'Credenciales incorrectas. Inténtalo de nuevo.';
+        }
+    </script>
+</body>
+</html>

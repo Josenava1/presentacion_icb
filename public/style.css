@@ -1,0 +1,135 @@
+/* Estilos Generales y Reset */
+:root {
+    --bg-color: #0A0A0A;
+    --text-color: #EAEAEA;
+    --primary-color: #00BFFF; /* Deep Sky Blue - un neón elegante */
+    --input-bg: #1A1A1A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Evita scroll innecesario */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Efecto de fondo con Particles.js */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(10, 10, 10, 0.25); /* Transparencia sutil */
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #AAA;
+}
+
+/* Formulario de Login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form input {
+    background: var(--input-bg);
+    border: 1px solid #333;
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+}
+
+.login-form button {
+    background: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 191, 255, 0.3);
+}
+
+.error {
+    color: #FF5555;
+    margin-top: 15px;
+    height: 20px;
+}
+
+/* Contenedor del Video */
+.video-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: none
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Efecto de fondo con Particles.js */
+#particles-js {
+    position: absolute; /* O 'fixed' si quieres que no se mueva con el scroll */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* ¡MUY IMPORTANTE! Envía el fondo detrás de todo */
+}
