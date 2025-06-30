@@ -136,8 +136,13 @@ body {
 /* --- ESTILOS PARA EL HUB DE PRESENTACIÓN --- */
 
 .hub-container {
-    max-width: 960px; /* Hacemos el contenedor un poco más ancho */
+    max-width: 960px;
+    margin: 0 auto; /* <-- AÑADE ESTA LÍNEA PARA CENTRARLO HORIZONTALMENTE */
     padding: 50px;
+    background: rgba(10, 10, 10, 0.45); /* Puedes ajustar la opacidad aquí */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
 }
 
 .hub-header {
