@@ -28,7 +28,7 @@ app.post('/login', (req, res) => {
     if (username === ADMIN_USER && password === ADMIN_PASS) {
         // Si las credenciales son correctas, redirige a la página del video.
         // Usamos una URL no obvia para un toque extra de privacidad.
-        res.redirect('/w/video.presentacion');
+        res.redirect('/hub');
     } else {
         // Si no, redirige de vuelta al login con un parámetro de error
         res.redirect('/?error=1');
@@ -36,8 +36,13 @@ app.post('/login', (req, res) => {
 }); 
 
 // Ruta secreta para el video
-app.get('/w/video.presentacion', (req, res) => {
+app.get('/video.presentacion', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'video.html'));
+});
+
+// Ruta secreta para el portafolio
+app.get('/hub', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'portafolio.html'));
 });
 
 // Inicia el servidor
