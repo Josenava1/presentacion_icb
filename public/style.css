@@ -204,23 +204,26 @@ body {
 .hub-actions {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .action-btn {
-    display: inline-block; /* <-- AÑADE ESTA LÍNEA */
-    padding: 15px 35px;
+    display: inline-flex; /* Usamos inline-flex para alinear y que respete el tamaño */
+    align-items: center;
+    gap: 10px;
+    
+    /* --- AJUSTES DE TAMAÑO --- */
+    padding: 12px 28px;   /* Reducimos el padding (Antes era 15px 35px) */
+    font-size: 0.9rem;    /* Hacemos la fuente un poco más pequeña (Antes era 1rem) */
+    /* ------------------------- */
+
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 .action-btn.primary {
