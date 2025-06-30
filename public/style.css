@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden; /* Evita scroll innecesario */
+    overflow: auto; 
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -251,4 +251,80 @@ body {
     margin-top: 20px; /* Le da espacio entre el video y el botón */
     padding-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+}
+
+/* =================================================================== */
+/* ---        REGLAS DE DISEÑO RESPONSIVO (VERSIÓN MEJORADA)       --- */
+/* =================================================================== */
+
+/* Reglas para pantallas de hasta 992px (portátiles pequeños y tablets grandes) */
+@media (max-width: 992px) {
+    .hub-name, .portfolio-title {
+        font-size: 2.5rem; /* Reducimos un poco el título principal */
+    }
+
+    .hub-container {
+        max-width: 90%; /* Hacemos que el contenedor se ajuste al ancho */
+    }
+}
+
+
+/* Reglas para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+
+    /* --- AJUSTES GENERALES --- */
+    .container {
+        padding: 30px 20px;
+    }
+
+    /* --- AJUSTES PARA EL HUB/PORTAFOLIO --- */
+    .hub-name, .portfolio-title {
+        font-size: 2.2rem;
+    }
+
+    .hub-tagline, .portfolio-subtitle {
+        font-size: 1rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .pillar {
+        padding: 25px; /* Menos padding en los pilares */
+    }
+
+    .hub-actions {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .action-btn {
+        width: 100%; 
+        justify-content: center;
+    }
+
+    /* --- AJUSTES PARA EL VIDEO --- */
+    .video-container {
+        padding: 15px;
+    }
+
+    /* --- AJUSTES PARA EL LOGIN --- */
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+.hub-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #AAA;
+    font-style: italic;
 }
